@@ -1,8 +1,11 @@
-*.ini
-__pycache__
-bin
-lib
-include
-lib64
+database.ini
+__pycache__/*
+bin/*
+lib/**/*
+include/*
+lib64/**/*
 pyvenv.cfg
-'PG social.session.sql'
+PG social.session.sql
+.vscode
+ pyvenv.cfg
+/home/yhlas/coding/mini_social/lib64
