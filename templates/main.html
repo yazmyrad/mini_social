@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inconsolata:wght@200..900&display=swap');
+
+/* font family - "Inconsolata"
+	"Edu AU VIC WA NT Hand"  
+
+
+ */
+
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container {
+	position: relative;
+	width: 85%;
+	max-width: 100%;
+	height: calc(100vh - 40px);
+	background: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	display:flex;
+}
+
+.container .leftside {
+	position: relative;
+	flex: 30%;
+	border-right: 1px solid black;
+}
+
+.container .rightside {
+	position: relative;
+	flex: 70%;
+	
+}
+
+.container .rightside::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url();
+	opacity: 0.06;
+}
+
+
+.header {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.userImage {
+	position: relative;
+	width: 50px;
+  	height: 50px;
+  	border-radius: 50%;
+  	overflow: hidden;
+  	cursor:pointer;
+}
+
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	object-fit: cover;
+}
+
+.nav_icons {
+	display: flex;
+}
+
+.nav_icons li {
+	display: flex;
+	list-style:none;
+	cursor:pointer;
+	font-size:1.5em;
+	margin-left: 22px;	
+}
+
+.search_chat {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.search_chat div {
+	width:100%;
+}
+
+.search_chat div input {
+	width:100%;
+	outline: none;
+	border: none;
+	background: white;
+	padding: 6px;
+	height: 38px;
+	border-radius: 30px;
+	font-size: 14px;
+	padding-left: 40px;
+}
+
+.search_chat div input::placeholder {
+	color: grey;
+}
+
+.search_chat div ion-icon {
+	position: absolute;
+	left: 30px;
+	font-size: 1.2em;
+	top:14px;
+	cursor: pointer;
+}
+
+.chatlist {
+	position: relative;
+	height: calc(100% - 110px);
+	overflow-y: auto;
+	
+}
+
+.chatlist .block{
+	position: relative;
+	width:100%;
+	display:flex;
+	align-items:center;
+	padding: 15px;
+	border-bottom:1px solid rgba(0, 0, 0, 0.06);
+	cursor:pointer;
+}
+
+.chatlist .block:hover {
+	background-color: greenyellow;
+}
+
+.chatlist .block .chat_img {
+	position: relative;
+	min-width: 45px;
+	height: 45px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.chatlist .block .details {
+	position: relative;
+	width: 100%;
+}
+
+.chatlist .block .details .listHead {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 6px;
+	
+}
+
+.chatlist .block .details .listHead h4 {
+	font-family:"Edu AU VIC WA NT Hand" ;
+	font-size: 1.1em;
+	font-weight: 600;
+	color: black;
+}
+
+.chatlist .block .details .listHead .time {
+	font-size: 0.75em;
+	color: #aaa;
+}
+
+.block .message {
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.block .message p {
+	color: #aaa;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	font-size:0.9em;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.imgText {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.imgText h4 {
+	font-weight: 400;
+	line-height: 1.2em;
+	margin-left: 35px;
+	position: relative;
+}
+
+.rightside {
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.posts::-webkit-scrollbar {
+    display: none;
+}
+
+.posts {
+	margin-right: 5%; 
+	margin-left: 5%; 
+	overflow-y: scroll; 
+	overflow-x: hidden; 
+	display: grid; 
+	max-height: 100%;
+}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Networking</title>
+</head>
+<body>
+    <div class="container">
+		<div class='leftside'>
+		<!-- header -->
+			<div class="header">
+				<div class="userImage">
+					<img class="cover" src="/profile_photo.jpg">	
+				</div>
+				<ul class="nav_icons">
+					<li>
+						<a href="/post">
+							<ion-icon name="add-circle-outline"></ion-icon>
+						</a>
+					</li>
+					<li>
+						<a href="/logout">
+							<ion-icon name="exit-outline"></ion-icon>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- search -->
+			<div class="search_chat">
+				<div>
+					<input type="text" placeholder="Search or start texting">
+					<ion-icon name="search-outline"></ion-icon>
+				</div>
+			</div>
+		<!-- chat list -->
+			<div class="chatlist">
+				{{ user_block }}
+			</div>
+		</div>
+		<!--right side -->
+		<div class='rightside'>
+		<!-- posts -->
+			<div class="card-columns posts" >
+				{{ post }}
+			</div>
+    	</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

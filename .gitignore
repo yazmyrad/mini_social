@@ -6,6 +6,6 @@ include/*
 lib64/**/*
 pyvenv.cfg
 PG social.session.sql
-.vscode
+.vscode/*
  pyvenv.cfg
 /home/yhlas/coding/mini_social/lib64
