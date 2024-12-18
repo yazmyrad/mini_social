@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form method="post" action="/edit_post">
+        <input type="hidden" name="original_title" value="{{ title }}">
+        <label for="new_title">Title:</label><br>
+        <input type="text" id="new_title" name="new_title" value="{{ title }}"><br><br>
+        <label for="new_content">Content:</label><br>
+        <textarea id="new_content" name="new_content">{{ content }}</textarea><br><br>
+        <button type="submit" class="btn btn-primary">Update Post</button>
+    </form>
+    <a href="/home">Cancel</a>
+</body>
+</html>

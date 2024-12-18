@@ -106,45 +106,6 @@ body {
 	margin-left: 22px;	
 }
 
-.search_chat {
-	position: relative;
-	width: 100%;
-	height: 50px;
-	background: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0 15px;
-}
-
-.search_chat div {
-	width:100%;
-}
-
-.search_chat div input {
-	width:100%;
-	outline: none;
-	border: none;
-	background: white;
-	padding: 6px;
-	height: 38px;
-	border-radius: 30px;
-	font-size: 14px;
-	padding-left: 40px;
-}
-
-.search_chat div input::placeholder {
-	color: grey;
-}
-
-.search_chat div ion-icon {
-	position: absolute;
-	left: 30px;
-	font-size: 1.2em;
-	top:14px;
-	cursor: pointer;
-}
-
 .chatlist {
 	position: relative;
 	height: calc(100% - 110px);
@@ -263,43 +224,17 @@ body {
 				<div class="userImage">
 					<img class="cover" src="/profile_photo.jpg">	
 				</div>
-				<div class="details">
-					<div class="listHead">
-						<h4>{{ username }}</h4>
-					</div>
-				</div>
 				<ul class="nav_icons">
 					<li>
-						<a href="/settings">
-							<ion-icon name="people-circle-outline"></ion-icon>
+						<a href="/home">
+							<ion-icon name="home-outline"></ion-icon>
 						</a>
 					</li>
-					<li>
-						<a href="/post">
-							<ion-icon name="add-circle-outline"></ion-icon>
-						</a>
-					</li>
-					<li>
-						<a href="/logout">
-							<ion-icon name="exit-outline"></ion-icon>
-						</a>
-					</li>
-					
 				</ul>
-			</div>
-			<!-- search -->
-			<div class="search_chat">
-				<div>
-					<input type="text" placeholder="Search or start texting">
-					<ion-icon name="search-outline"></ion-icon>
-				</div>
 			</div>
 		<!-- chat list -->
 			<div class="chatlist">
-				<!--{{ group_block }}-->
-				
 				{{ user_block }}
-
 			</div>
 		</div>
 		<!--right side -->
