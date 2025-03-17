@@ -5,3 +5,5 @@ Hi there, this is Python project, with psycopg2 I've build simple social web app
 3. Create DB in that environment and try running config_db.py and connect.py
 4. If all works, run schema.py to create all tables for storing data in DB
 5. Then you can run main.py and visit localhost to see how it works.
+
+![](preview.gif)
